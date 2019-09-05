@@ -1,0 +1,14 @@
+<% unless @day_in_week.nil? %>
+  <p>
+    <%= @year %> 年 <%= @month %> 月 <%= @days %> 日は <%= @day_in_week %> 曜日
+  </p>
+<% end %>
+
+
+<%= form_tag do %> 
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token%>
+  <%= text_field_tag :year %> 年
+  <%= text_field_tag :month %> 月
+  <%= text_field_tag :days %> 日
+  <%= submit_tag '送信' %>
+<% end %>
