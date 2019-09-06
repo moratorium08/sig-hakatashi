@@ -1,10 +1,10 @@
 <template>
   <div>
     <div>
-      <board :speed="speed" />
+      <sushicontrol @onChange="onSpeedChange" :speed="speed" />
     </div>
     <div>
-      <sushicontrol @onChange="onSpeedChange" :speed="speed" />
+      <board :speed="speed" />
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
     },
     created() {
         const update = () => {
-            fetch('http://sushi.mor.bz/speed')
+            fetch('/speed')
             .then(function(response) {
                 return response.json();
             })
@@ -41,7 +41,7 @@ export default {
     },
     methods: {
         onSpeedChange(speed) {
-            fetch('http://sushi.mor.bz/speed', {method: "POST", body: JSON.stringify({speed})})
+            fetch('/speed', {method: "POST", body: JSON.stringify({speed})})
             .then(function(response) {
                 return response.json();
             })

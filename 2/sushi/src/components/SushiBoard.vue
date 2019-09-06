@@ -58,7 +58,8 @@ export default {
 <style>
 .board {
   position: relative;
-  width: 90vmin;
-  height: 90vmin;
+  width: 75vmin;
+  height: 75vmin;
+  margin: auto;
 }
 </style>

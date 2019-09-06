@@ -17,6 +17,12 @@ struct Speed {
     speed: u64,
 }
 
+#[derive(Serialize, Deserialize)]
+struct Message {
+    name: String,
+    diff: i64,
+}
+
 lazy_static! {
     static ref SPEED: Mutex<u64> = Mutex::new(1);
 }

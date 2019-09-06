@@ -8,12 +8,7 @@
   }
   "
   >
-    <img
-      class="sushi-img"
-      src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/sushi.png"
-      :style="{
-     }"
-    />
+    <img class="sushi-img" src="../assets/sushi.png" />
   </div>
 </template>
 
@@ -24,14 +19,14 @@ export default {
     computed: {
         delay() {
             if (this.id !== 8) {
-                return `${-this.id * 5 / 8 / this.speed}s`;
+                return `${-this.id * 80 / 8 / this.speed}s`;
             } else {
                 return '';
             }
         },
         animation() {
             if (this.id !== 8) {
-                return `loop ${5 / this.speed}s linear infinite`;
+                return `loop ${80 / this.speed}s linear infinite`;
             } else {
                 return '';
             }
@@ -50,8 +45,8 @@ export default {
 <style>
 .sushi {
   position: absolute;
-  width: 30vmin;
-  height: 30vmin;
+  width: 25vmin;
+  height: 25vmin;
 }
 
 .sushi-move {
@@ -60,8 +55,8 @@ export default {
 }
 
 .sushi-fixed {
-  left: 30vmin;
-  top: 30vmin;
+  left: 25vmin;
+  top: 25vmin;
 }
 
 .sushi-img {
@@ -75,15 +70,15 @@ export default {
   }
 
   25% {
-    transform: translateX(60vmin) translateY(0px);
+    transform: translateX(50vmin) translateY(0px);
   }
 
   50% {
-    transform: translateX(60vmin) translateY(60vmin);
+    transform: translateX(50vmin) translateY(50vmin);
   }
 
   75% {
-    transform: translateX(0px) translateY(60vmin);
+    transform: translateX(0px) translateY(50vmin);
   }
 
   100% {
